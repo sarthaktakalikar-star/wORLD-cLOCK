@@ -12,63 +12,25 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <div class="aurora aurora-one"></div>
-  <div class="aurora aurora-two"></div>
-  <div class="stars" aria-hidden="true"></div>
-  <div class="grid-glow" aria-hidden="true"></div>
-
+  <div class="aurora aurora-one"></div><div class="aurora aurora-two"></div>
+  <div class="stars" aria-hidden="true"></div><div class="grid-glow" aria-hidden="true"></div>
   <main class="app-shell">
     <header class="topbar">
-      <a class="brand" href="./" aria-label="Orbit home">
-        <span class="brand-mark"><span></span><span></span><span></span></span>
-        <span>ORBIT</span>
-      </a>
-      <div class="topbar-meta">
-        <span class="live-dot"></span>
-        <span>LIVE SYNCHRONIZATION</span>
-        <span class="utc-label" id="utcLabel">UTC +00:00</span>
-      </div>
+      <a class="brand" href="./" aria-label="Orbit home"><span class="brand-mark"><span></span><span></span><span></span></span><span>ORBIT</span></a>
+      <div class="topbar-meta"><span class="live-dot"></span><span>LIVE SYNCHRONIZATION</span><span class="utc-label" id="utcLabel">UTC +00:00</span></div>
     </header>
-
     <section class="hero">
       <div class="eyebrow"><span class="spark">✦</span> TIME, REIMAGINED</div>
       <h1>Every place.<br /><em>One moment.</em></h1>
       <p class="hero-copy">A living window into the world. Track your people, plan your next move, and feel the rhythm of the planet.</p>
-      <div class="hero-actions">
-        <button class="primary-button" id="addCityButton"><span>＋</span> Add a city</button>
-        <button class="icon-button" id="themeButton" aria-label="Change atmosphere" title="Change atmosphere">◐</button>
-      </div>
+      <div class="hero-actions"><button class="primary-button" id="addCityButton"><span>＋</span> Add a city</button><button class="secondary-button" id="locateButton"><span>⌖</span> Use my location</button><button class="icon-button" id="themeButton" aria-label="Change atmosphere" title="Change atmosphere">◐</button></div>
+      <p class="location-permission" id="locationStatus" role="status">Your local time is detected from your browser.</p>
     </section>
-
-    <section class="dashboard-head">
-      <div>
-        <p class="section-kicker">YOUR CONSTELLATION</p>
-        <h2>World clocks <span id="clockCount">04</span></h2>
-      </div>
-      <div class="date-pill"><span class="sun-icon">☼</span><span id="dateLabel">Thursday, September 18</span></div>
-    </section>
-
+    <section class="dashboard-head"><div><p class="section-kicker">YOUR CONSTELLATION</p><h2>World clocks <span id="clockCount">04</span></h2></div><div class="date-pill"><span class="sun-icon">☼</span><span id="dateLabel">Today</span></div></section>
     <section class="clock-grid" id="clockGrid" aria-live="polite"></section>
-
-    <footer class="footer">
-      <span>Built for the curious <span class="heart">♥</span></span>
-      <span class="footer-line"></span>
-      <span id="localLabel">Your local time</span>
-    </footer>
+    <footer class="footer"><span>Built for the curious <span class="heart">♥</span></span><span class="footer-line"></span><span id="localLabel">Your local time</span></footer>
   </main>
-
-  <dialog class="city-dialog" id="cityDialog">
-    <form method="dialog" class="dialog-card" id="cityForm">
-      <button class="close-button" value="cancel" aria-label="Close">×</button>
-      <p class="section-kicker">EXPAND YOUR CONSTELLATION</p>
-      <h2>Add a city</h2>
-      <p class="dialog-copy">Choose a place to keep close.</p>
-      <label for="citySearch">Search cities</label>
-      <input id="citySearch" type="search" placeholder="Try Tokyo, Lagos, or your own..." autocomplete="off" />
-      <div class="city-options" id="cityOptions"></div>
-    </form>
-  </dialog>
-
+  <dialog class="city-dialog" id="cityDialog"><form method="dialog" class="dialog-card" id="cityForm"><button class="close-button" value="cancel" aria-label="Close">×</button><p class="section-kicker">EXPAND YOUR CONSTELLATION</p><h2>Add a city</h2><p class="dialog-copy">Choose a place to keep close.</p><label for="citySearch">Search cities</label><input id="citySearch" type="search" placeholder="Try Tokyo, Lagos, or your own..." autocomplete="off" /><div class="city-options" id="cityOptions"></div></form></dialog>
   <script src="app.js"></script>
 </body>
 </html>
